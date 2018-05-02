@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
 }
 
 fun spotDiff(message: String): String {
-    val p = Pattern.compile("expected:<\\{(.+)\\}> but was\\:<\\{(.+)\\}>")
+    val p = Pattern.compile("expected:<\\[?\\{(.+)\\}\\]?> but was:<\\[?\\{(.+)\\}\\]?>")
     val m = p.matcher(message)
 
     if (m.find()) {
